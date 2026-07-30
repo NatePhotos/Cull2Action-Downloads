@@ -1,4 +1,6 @@
 {
-  "_comment": "Activation codes cancelled before their expiry date. Each entry is a fingerprint of a code, not a code itself, so this file grants nothing. Cull2Action reads it a few times a day; a cancelled code stops working within hours. Copy fingerprints from the Codes app: right-click an issued code and choose Revoke.",
-  "revoked": []
+  "_comment": "Activation codes cancelled before their expiry date. Each entry is a fingerprint of a code, not a code itself, so this file grants nothing.",
+  "revoked": [
+    "114EC23C3079"
+  ]
 }
