@@ -1,6 +1,4 @@
 {
   "_comment": "Activation codes cancelled before their expiry date. Each entry is a fingerprint of a code, not a code itself, so this file grants nothing.",
-  "revoked": [
-    "114EC23C3079"
-  ]
+  "revoked": []
 }
