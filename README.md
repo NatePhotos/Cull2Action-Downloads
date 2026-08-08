@@ -11,6 +11,59 @@ your name.
 
 ---
 
+## What's new in 0.6.0-beta
+
+**Cards copy about twice as fast**
+- Four photos move at once instead of one, and the copy no longer runs at a
+  throttled disk priority. Measured on a CFexpress card to a T7: 527 MB/s where
+  it used to sit near 280.
+- Copy speed and time remaining show while a card is offloading.
+- Copying through this Mac first has been removed — measured 53% slower than
+  going straight to the destination.
+
+**Two ways a card could lose you a photo, both fixed**
+- A photo could be silently overwritten when two folders on one card held the
+  same filename. A whole-card ingest of 1,360 photos would have destroyed
+  frames.
+- A RAW could be paired with the wrong JPEG. Frame numbering restarts in every
+  card folder, so a RAW was shown with a same-numbered JPEG from another day —
+  55 frames in one real offload.
+
+**Subfolders**
+- *Settings → Interface → Include Subfolders* opens the photos inside a
+  folder's subfolders too, so a shoot split across 100MSDCF and 101MSDCF culls
+  as one run. Off by default.
+- RAWs still pair only within their own subfolder, and frames stay grouped by
+  folder rather than interleaved by number.
+- Opening a folder that holds only subfolders used to crash the app. It now
+  says what it found and offers to open them.
+
+**Scanning**
+- A scan could stick at 0%: opening a folder, going Home and reopening it left
+  two scans running, with the visible one queued behind the abandoned one.
+- Folders open in the order the photos were taken.
+- Recent-folder covers on the Home screen come from a cache instead of being
+  rebuilt on every visit.
+
+**Ship**
+- The app no longer freezes while Ship copies photos, and the bar reports files
+  written rather than files queued.
+- Clearer message when photos are skipped for a name collision — including two
+  photos in the same ship that share a name, which the old wording blamed on
+  the destination.
+
+**Culling**
+- A blink is marked whether or not the frame is part of a burst.
+- Looking away is drawn as an eye, and a blink is reported ahead of gaze.
+- Background faces are judged on how clearly they were captured, so a passer-by
+  is less likely to sink a good frame.
+- The EXIF panel shows which subfolder a photo came from.
+
+Earlier builds are listed on the [releases page](../../releases), each with its
+own notes.
+
+---
+
 ## Installing
 
 **1. Open the `.dmg` and drag Cull2Action onto Applications.**
