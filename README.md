@@ -15,8 +15,7 @@ your name.
 
 **Cards copy about twice as fast**
 - Four photos move at once instead of one, and the copy no longer runs at a
-  throttled disk priority. Measured on a CFexpress card to a T7: 527 MB/s where
-  it used to sit near 280.
+  throttled disk priority. Measured at close to twice the previous speed.
 - Copy speed and time remaining show while a card is offloading.
 - Copying through this Mac first has been removed — measured 53% slower than
   going straight to the destination.
@@ -31,8 +30,8 @@ your name.
 
 **Subfolders**
 - *Settings → Interface → Include Subfolders* opens the photos inside a
-  folder's subfolders too, so a shoot split across 100MSDCF and 101MSDCF culls
-  as one run. Off by default.
+  folder's subfolders too, so a shoot split across several folders on one card
+  culls as one run. Off by default.
 - RAWs still pair only within their own subfolder, and frames stay grouped by
   folder rather than interleaved by number.
 - Opening a folder that holds only subfolders used to crash the app. It now
