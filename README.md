@@ -11,6 +11,7 @@ your name.
 
 ---
 
+<!-- WHATSNEW:START — written by release.yml from the main repo's README. Edits here are overwritten on the next release. -->
 ## What's new in 0.6.0-beta
 
 **Cards copy about twice as fast**
@@ -57,6 +58,7 @@ your name.
 - Background faces are judged on how clearly they were captured, so a passer-by
   is less likely to sink a good frame.
 - The EXIF panel shows which subfolder a photo came from.
+<!-- WHATSNEW:END -->
 
 Earlier builds are listed on the [releases page](../../releases), each with its
 own notes.
