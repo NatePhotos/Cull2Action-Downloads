@@ -1,7 +1,7 @@
 # Cull2Action — Beta Downloads
 
-macOS photo culling for photographers. This repository holds **builds only** —
-there is no source code here.
+**Culling Software made for Photographers.** This repository holds **builds
+only** — there is no source code here.
 
 **[Download the latest build →](../../releases/latest)**
 
