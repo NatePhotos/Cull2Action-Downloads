@@ -15,15 +15,14 @@ your name.
 ## What's new in 0.7.0-beta
 
 **A folder opens on the right photo**
-- A folder could open on a frame from the middle of the shoot and jump to
-  the real first one seconds later. Photos are ordered by filename until the
-  capture times are read, which holds until the frame counter rolls over
-  9999 → 0001 mid-shoot. One folder opened on photo 549 of 703, with the true
-  first frame 51 minutes earlier.
-- The order is now settled as soon as the dates are read rather than at the end
-  of burst grouping — on that folder, under a second instead of sixteen. Until
-  it settled the folder really was in the wrong order, so the arrow keys walked
-  it that way too.
+- A folder could open on a frame from the middle of the shoot and jump to the
+  first one a few seconds later. Photos are ordered by filename until their
+  capture times have been read, and that order is wrong whenever the camera's
+  frame counter rolls over mid-shoot.
+- The order now settles as soon as the capture times are read, instead of
+  waiting for burst grouping to finish — seconds earlier on a large folder.
+  Until it settled the folder really was in the wrong order, so the arrow keys
+  walked it that way too.
 
 **Scene view scrolls**
 - Both strips — the frames of the burst and the row of scenes — now scroll
@@ -31,9 +30,9 @@ your name.
   always has. Previously neither answered a scroll at all.
 
 **Grid shows where a frame placed**
-- Each tile carried a raw score in the corner: 78, 100, 99, 99 on four frames
-  of the same pose. On its own that number says nothing — it only means
-  something against what the frames beside it scored.
+- Each tile carried a raw score in the corner. On its own that number says
+  nothing — it only means something against what the frames beside it scored,
+  which left you comparing them in your head.
 - Tiles now show the frame's rank in its burst, in the filmstrip's colours:
   blue for the best of the run, pale blue for the top third, grey for the
   middle, red for the bottom third or for shut eyes. Frames outside a burst
