@@ -12,52 +12,38 @@ your name.
 ---
 
 <!-- WHATSNEW:START — written by release.yml from the main repo's README. Edits here are overwritten on the next release. -->
-## What's new in 0.6.0-beta
+## What's new in 0.7.0-beta
 
-**Cards copy about twice as fast**
-- Four photos move at once instead of one, and the copy no longer runs at a
-  throttled disk priority. Measured at close to twice the previous speed.
-- Copy speed and time remaining show while a card is offloading.
-- Copying through this Mac first has been removed — measured 53% slower than
-  going straight to the destination.
+**A folder opens on the right photo**
+- A folder could open on a frame from the middle of the shoot and jump to
+  the real first one seconds later. Photos are ordered by filename until the
+  capture times are read, which holds until the frame counter rolls over
+  9999 → 0001 mid-shoot. One folder opened on photo 549 of 703, with the true
+  first frame 51 minutes earlier.
+- The order is now settled as soon as the dates are read rather than at the end
+  of burst grouping — on that folder, under a second instead of sixteen. Until
+  it settled the folder really was in the wrong order, so the arrow keys walked
+  it that way too.
 
-**Two ways a card could lose you a photo, both fixed**
-- A photo could be silently overwritten when two folders on one card held the
-  same filename. A whole-card ingest of 1,360 photos would have destroyed
-  frames.
-- A RAW could be paired with the wrong JPEG. Frame numbering restarts in every
-  card folder, so a RAW was shown with a same-numbered JPEG from another day —
-  55 frames in one real offload.
+**Scene view scrolls**
+- Both strips — the frames of the burst and the row of scenes — now scroll
+  under the pointer with a wheel or a two-finger swipe, like the filmstrip
+  always has. Previously neither answered a scroll at all.
 
-**Subfolders**
-- *Settings → Interface → Include Subfolders* opens the photos inside a
-  folder's subfolders too, so a shoot split across several folders on one card
-  culls as one run. Off by default.
-- RAWs still pair only within their own subfolder, and frames stay grouped by
-  folder rather than interleaved by number.
-- Opening a folder that holds only subfolders used to crash the app. It now
-  says what it found and offers to open them.
+**Grid shows where a frame placed**
+- Each tile carried a raw score in the corner: 78, 100, 99, 99 on four frames
+  of the same pose. On its own that number says nothing — it only means
+  something against what the frames beside it scored.
+- Tiles now show the frame's rank in its burst, in the filmstrip's colours:
+  blue for the best of the run, pale blue for the top third, grey for the
+  middle, red for the bottom third or for shut eyes. Frames outside a burst
+  show nothing, since there is nothing to rank them against.
 
-**Scanning**
-- A scan could stick at 0%: opening a folder, going Home and reopening it left
-  two scans running, with the visible one queued behind the abandoned one.
-- Folders open in the order the photos were taken.
-- Recent-folder covers on the Home screen come from a cache instead of being
-  rebuilt on every visit.
-
-**Ship**
-- The app no longer freezes while Ship copies photos, and the bar reports files
-  written rather than files queued.
-- Clearer message when photos are skipped for a name collision — including two
-  photos in the same ship that share a name, which the old wording blamed on
-  the destination.
-
-**Culling**
-- A blink is marked whether or not the frame is part of a burst.
-- Looking away is drawn as an eye, and a blink is reported ahead of gaze.
-- Background faces are judged on how clearly they were captured, so a passer-by
-  is less likely to sink a good frame.
-- The EXIF panel shows which subfolder a photo came from.
+**Settings**
+- The AI settings have their own tab. Interface had become the place for
+  everything that was not performance or storage, and the two AI entries were
+  the longest in it — neither is an interface setting.
+- Every tab is wider, so the explanations wrap less.
 <!-- WHATSNEW:END -->
 
 Earlier builds are listed on the [releases page](../../releases), each with its
